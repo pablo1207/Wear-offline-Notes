@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rlParent"
+    style="@style/MatchParent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    tools:context="soy.gabimoreno.offlinenotes.view.activity.KeyboardActivity"
+    tools:deviceIds="wear_square">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/ibCaps"
+            style="@style/Btn"
+            android:src="@drawable/ic_arrow_upward_white_16dp"/>
+
+        <Button
+            android:id="@+id/btnSpace"
+            style="@style/Btn"
+            android:text="@string/char_space"/>
+
+        <Button
+            android:id="@+id/btnNumbers"
+            style="@style/Btn.7sp"
+            android:text="@string/char_numbers"/>
+
+        <ImageButton
+            android:id="@+id/ibBackspace"
+            style="@style/Btn"
+            android:src="@drawable/ic_keyboard_backspace_white_16dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/Btn.7sp"
+            android:backgroundTint="@color/accent"
+            android:text="@string/ok"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:background="@android:color/white"
+        android:ellipsize="end"
+        android:hint="@string/write_note"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black_alpha_40"
+        android:textIsSelectable="false"/>
+
+    <ScrollView
+        style="@style/MatchParent"
+        android:layout_below="@id/tv">
+
+        <RelativeLayout
+            android:id="@+id/rlKeys"
+            style="@style/MatchParent"
+            android:gravity="center">
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

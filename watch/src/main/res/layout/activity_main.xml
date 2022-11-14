@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchParent"
+    >
+
+    <FrameLayout
+        style="@style/MatchParent"
+        >
+
+        <androidx.wear.widget.WearableRecyclerView
+            android:id="@+id/rv"
+            style="@style/MatchParent"
+            android:background="@color/white"
+            android:scrollbars="vertical" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:text="Notes App"
+            android:id="@+id/txtview_text"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/ibRemove"
+            style="@style/Ib"
+            android:layout_height="121dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_delete_forever" />
+
+        <ImageButton
+            android:id="@+id/ibAdd"
+            style="@style/Ib"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_add" />
+    </FrameLayout>
+</androidx.wear.widget.BoxInsetLayout>
